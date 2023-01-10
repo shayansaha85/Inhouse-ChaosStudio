@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Chaos</title>
+    <link rel="stylesheet" href="static/login_page.css" />
+    <style>
+      #headingMemory {
+        font-size: 35px;
+        color: rgb(27, 68, 41);
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+    
+
+
+      #MemoryStressForm {
+        padding: 5%;
+        border-radius: 20px;
+        background-color: rgb(232, 255, 255);
+      }
+
+      #MemoryRandomSpikeForm {
+        padding: 5%;
+        border-radius: 20px;
+        background-color: rgb(230, 255, 240);
+      }
+
+      #MemoryFixedSpikeForm {
+        padding: 5%;
+        border-radius: 20px;
+        background-color: rgb(240, 240, 240);
+      }
+
+      h5 {
+        font-size: 25px;
+        font-weight: bold;
+        font-style: italic;
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(70, 18, 18);
+      }
+
+      #containerSecond {
+        padding-right: 15%;
+        padding-left: 15%;
+
+      }
+
+      #pageHeading{
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <br /><br />
+    <div class="container" id="containerSecond">
+      <div class="jumbotron">
+        <h4 id="headingMemory">Memory Chaos</h4>
+
+      </div>
+    </div>
+    <hr />
+    <br />
+    <div class="container" id="containerSecond">
+      <div class="jumbotron">
+        <div id="MemoryStressForm">
+          <h5 style="text-align: center">Memory Stress</h5>
+          <br />
+          <form method="post">
+            <br />
+            <div class="form-group">
+              <i><b>BURN SIZE (in MB)</b></i> <br />
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputPassword1"
+                name="memoryStress_size"
+                placeholder="Enter burn percentage"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <i><b>DURATION (in sec)</b></i> <br />
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputPassword1"
+                name="memoryStress_duration"
+                placeholder="Enter duration"
+              />
+            </div>
+            <br />
+            <p style="text-align: center">
+              <button type="submit" class="btn btn-danger btn-lg">
+                Execute Stress
+              </button>
+            </p>
+          </form>
+        </div>
+
+        <br /><br />
+
+        <div id="MemoryRandomSpikeForm">
+          <h5 style="text-align: center">Memory Random Spikes</h5>
+          <br />
+          <form method="post">
+            <br />
+            <div class="form-group">
+              <i><b>NO. OF SPIKES</b></i
+              ><br />
+              <input
+                type="number"
+                class="form-control"
+                name="memorySpikeRandom_number"
+                id="exampleInputPassword1"
+                placeholder="Enter number of spikes"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <i><b>MINIMUM SPIKE SIZE (in MB)</b></i
+              ><br />
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputPassword1"
+                name="memorySpikeRandom_size_min"
+                placeholder="Spike percetage (minimum)"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <i><b>MAXIMUM SPIKE SIZE (in MB)</b></i><br />
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputPassword1"
+                name="memorySpikeRandom_size_max"
+                placeholder="Spike percetage (maximum)"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <i><b>DURATION OF EACH SPIKE (in sec)</b></i
+              ><br />
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputPassword1"
+                name="memorySpikeRandom_duration"
+                placeholder="Duration of each spike"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <i><b>SLEEP TIME BETWEEN SPIKES (in sec)</b></i
+              ><br />
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputPassword1"
+                name="memorySpikeRandom_timegap"
+                placeholder="Sleep time between spikes"
+              />
+            </div>
+            <br />
+            <p style="text-align: center">
+              <button type="submit" class="btn btn-danger btn-lg">
+                Execute Stress
+              </button>
+            </p>
+          </form>
+        </div>
+
+        <br /><br />
+
+        <div id="MemoryFixedSpikeForm">
+          <h5 style="text-align: center">Memory Fixed Spikes</h5>
+          <br />
+          <form method="post">
+            <br />
+            <div class="form-group">
+              <i><b>NO. OF SPIKES</b></i
+              ><br />
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputPassword1"
+                name="memorySpikeFixed_number"
+                placeholder="Enter number of spikes"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <i><b>SPIKE SIZE (in MB)</b></i
+              ><br />
+              <input
+                type="number"
+                class="form-control"
+                name="memorySpikeFixed_size"
+                id="exampleInputPassword1"
+                placeholder="Spike percetage"
+              />
+            </div>
+            <br />
+
+            <div class="form-group">
+              <i><b>DURATION OF EACH SPIKE (in sec)</b></i
+              ><br />
+              <input
+                type="number"
+                class="form-control"
+                name="memorySpikeFixed_duration"
+                id="exampleInputPassword1"
+                placeholder="Duration of each spike"
+              />
+            </div>
+            <br />
+            <div class="form-group">
+              <i><b>SLEEP TIME BETWEEN EACH SPIKES (in sec)</b></i
+              ><br />
+
+              <input
+                type="number"
+                class="form-control"
+                id="exampleInputPassword1"
+                name="memorySpikeFixed_timegap"
+                placeholder="Sleep time between spikes"
+              />
+            </div>
+            <br />
+            <p style="text-align: center">
+              <button type="submit" class="btn btn-danger btn-lg">
+                Execute Stress
+              </button>
+            </p>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
