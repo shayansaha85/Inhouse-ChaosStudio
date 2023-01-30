@@ -28,5 +28,5 @@ def execute_DiskStressFixed(conn, noOfSpike, spikePerc, durationSpike, timeGap):
     
     while i<int(noOfSpike):
         execute_DiskStress(conn, spikePerc, durationSpike)
-        time.sleep(timeGap)
+        time.sleep(int(timeGap))
         i += 1

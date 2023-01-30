@@ -7,7 +7,7 @@ def execute_CPUStress(conn, percentage, cores, duration):
     server = "Linux"
     if server == "Linux":
         print("Executing stress")
-        stdin, stdout, stderr = conn.exec_command("stress-ng -c {cores} -l {percentage}% -t {duration}".format(cores=cores, percentage=percentage, duration=duration))
+        stdin, stdout, stderr = conn.exec_command("stress-ng -c {cores} -l {percentage} -t {duration}".format(cores=cores, percentage=percentage, duration=duration))
         print(stdout.read().decode().strip())
     
 
